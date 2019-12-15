@@ -1,4 +1,4 @@
-# this is a pretty fun "guess the numbers" game
+# this is a pretty enjoyable "guess the numbers" game
 
 import random
 
