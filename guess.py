@@ -7,8 +7,23 @@ guessesTaken = 0
 print("Hello!  What is your name?")
 myName = input()
 
-number = random.randint(1, 20)
-print("Well, " + myName + ", I am thinking of a number between 1 and 20")
+high_number = 20
+
+#Players choose the game difficulty here
+difficulty = 'N'
+while difficulty not in ['E', 'M', 'H', 'I']:
+    print ('Hello ' + myName + ' please choose a difficulty. E = Easy, M = Medium, H = Hard, I = Impossible')
+    difficulty = input().upper()
+if difficulty == 'M':
+    high_number = 30
+if difficulty == 'H':
+    high_number = 60
+if difficulty == 'I':
+    high_number = 150
+
+#replace every instance of 20 or '20' with the difficulty choice
+number = random.randint(1, high_number)
+print('Well, ' + myName + ', I am thinking of a number between 1 and ' + str(high_number) + '.')
 
 for guesses_taken in range(6):
     print("Take a guess.")
